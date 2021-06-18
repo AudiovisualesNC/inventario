@@ -6,5 +6,8 @@ module.exports = {
                 args[0].title = 'Inventario Salas';	// Replace your title here
                 return args;
             });
-    }
+    },
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/gui/'
+        : '/'
 };
